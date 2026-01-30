@@ -65,7 +65,7 @@
                 Check Visa Eligibility
             </a>
 
-            <a href="https://wa.me/6512345678"
+            <a href="https://wa.me/6282128595335"
                 class="group bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center">
                 <i class="fab fa-whatsapp mr-3 group-hover:scale-110 transition"></i>
                 WhatsApp Consultation
@@ -705,7 +705,7 @@
                 
                 <div class="space-y-4">
                     @php
-                        $whatsappNumber = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
+                        $whatsappNumber = '6282128595335'; // Ganti dengan nomor WhatsApp Anda
                         $whatsappMessage = 'Halo, saya tertarik dengan layanan visa Anda: ';
                     @endphp
                     
@@ -754,7 +754,7 @@
                 <div class="space-y-4">
                     @php
                         // Gunakan variabel yang sama atau buat berbeda
-                        $whatsappNumber = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
+                        $whatsappNumber = '6282128595335'; // Ganti dengan nomor WhatsApp Anda
                         $whatsappMessage = 'Halo, saya tertarik dengan layanan visa Indonesia Anda: ';
                     @endphp
                     
@@ -1040,8 +1040,8 @@
                 </div>
                 <h4 class="font-bold text-lg mb-2">Call Now</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Speak directly with our visa specialists.</p>
-                <a href="tel:+6512345678" class="inline-block text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300">
-                    +65 1234 5678
+                <a href="tel:+6282128595335" class="inline-block text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300">
+                    +62 821-2859-5335
                 </a>
             </div>
 
@@ -1052,7 +1052,7 @@
                 </div>
                 <h4 class="font-bold text-lg mb-2">WhatsApp</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Instant messaging support & queries.</p>
-                <a href="https://wa.me/6512345678" class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-medium transition">
+                <a href="https://wa.me/6282128595335" class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-medium transition">
                     Message Now
                 </a>
             </div>

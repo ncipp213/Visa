@@ -118,21 +118,19 @@
     </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden">
+    <div id="main-content" class="opacity-0 transition-opacity duration-500"></div>
     <!-- ===== APPLE-STYLE NAVIGATION ===== -->
     <nav class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-800/50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-gray-900/60">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo - Minimalis seperti Apple -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-sm">
-                        <i class="fas fa-globe-americas text-white text-sm"></i>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-lg font-bold tracking-tight leading-none">Universal</span>
-                        <span class="text-xs text-gray-500 dark:text-gray-400 tracking-wider">IMMIGRATION</span>
-                    </div>
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center py-1">
+                        <img src="{{ asset('images/logoVisa.png') }}" 
+                            alt="Universal Immigration Express" 
+                            class="w-48 sm:w-56 md:w-64 lg:w-72 h-auto object-contain transition-all duration-300">
+                    </a>
                 </div>
-
                 <!-- Desktop Menu (Hidden on mobile, visible on lg) - Apple Style -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="#home" class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
@@ -190,11 +188,12 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                            <i class="fas fa-globe-americas text-white text-sm"></i>
-                        </div>
-                        <span class="text-lg font-bold">Universal<span class="text-blue-600 dark:text-blue-400">Immigration</span></span>
+                    <div class="flex items-center">
+                        <a href="/" class="flex items-center py-1">
+                            <img src="{{ asset('images/logoVisa.png') }}" 
+                                alt="Universal Immigration Express" 
+                                class="w-48 sm:w-56 md:w-64 lg:w-72 h-auto object-contain transition-all duration-300">
+                        </a>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">
                         Your trusted partner for global visa solutions since 2022.
@@ -216,7 +215,7 @@
                     <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2 text-blue-500"></i>
-                            <a href="tel:+6512345678" class="hover:text-blue-600 dark:hover:text-blue-400">+65 1234 5678</a>
+                            <a href="tel:+62 821-2859-5335" class="hover:text-blue-600 dark:hover:text-blue-400">+62 821 2859 5335</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-blue-500"></i>
