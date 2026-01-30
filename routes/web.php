@@ -15,6 +15,7 @@ Route::get('/contact', function () {
     return view('home'); // Will be handled by frontend routing
 });
 
+Route::post('/book-consultation', [HomeController::class, 'bookConsultation'])->name('book.consultation');
 // API Routes for future use
 Route::prefix('api')->group(function () {
     Route::post('/check-eligibility', [HomeController::class, 'checkEligibility']);

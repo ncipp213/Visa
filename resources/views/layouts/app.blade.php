@@ -17,9 +17,10 @@
         }
     </script>
     
-    <!-- Vite CSS & JS -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -29,6 +30,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
     
+    <!-- Vite CSS & JS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +54,8 @@
     <meta property="og:description" content="Your trusted partner for global visa solutions">
     <meta property="og:type" content="website">
     
+
+
     <style>
         /* Fallback styles in case Tailwind doesn't load */
         :root {
@@ -98,7 +104,7 @@
         /* Basic button styling */
         button, .btn {
             background-color: var(--color-primary);
-            color: white;
+            color: rgb(255, 255, 255);
             padding: 0.5rem 1rem;
             border-radius: 0.375rem;
             border: none;
@@ -140,13 +146,13 @@
                 <div class="flex items-center space-x-3">
                     <!-- Dark/Light Mode Toggle - Apple Style -->
                     <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle dark mode">
-                        <i id="sunIcon" class="fas fa-sun text-gray-500 dark:text-gray-400 hidden"></i>
-                        <i id="moonIcon" class="fas fa-moon text-gray-500 dark:text-gray-400"></i>
+                        <i id="sunIcon" class="fas fa-sun text-black-500 dark:text-black-400 hidden"></i>
+                        <i id="moonIcon" class="fas fa-moon text-white-500 dark:text-white-400"></i>
                     </button>
                     
                     <!-- CTA Button - Minimal -->
                     <a href="#contact" class="hidden sm:inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-sm hover:shadow">
-                        Free Consult
+                        Book Consult
                     </a>
                     
                     <!-- Mobile Menu Button - Hamburger like Apple -->
@@ -169,7 +175,7 @@
                 <a href="#success" class="px-4 py-3 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Success Wall</a>
                 <a href="#pricing" class="px-4 py-3 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Pricing</a>
                 <a href="#contact" class="px-4 py-3 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
-                <a href="#contact" class="px-4 py-3 mt-2 bg-blue-600 text-white text-center rounded-lg font-medium hover:bg-blue-700">Free Consultation</a>
+                <a href="#contact" class="px-4 py-3 mt-2 bg-blue-600 text-white text-center rounded-lg font-medium hover:bg-blue-700">Book Consultation</a>
             </div>
         </div>
     </nav>
@@ -253,13 +259,13 @@
         </div>
     </footer>
 
-    <!-- ===== MODAL POP-UP: Book Free Consultation ===== -->
-    <div id="consultationModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+    <!-- ===== MODAL POP-UP: Book Consultation ===== -->
+    <div id="consultation" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto animate-scale-in">
             <!-- Modal Header -->
             <div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
                 <div>
-                    <h3 class="text-xl font-bold">Book Free Consultation</h3>
+                    <h3 class="text-xl font-bold">Book Consultation</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">30 minutes with our visa expert</p>
                 </div>
                 <button id="closeModal" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition">
@@ -316,7 +322,7 @@
                 </div>
                 
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition duration-300 shadow-sm hover:shadow">
-                    Schedule Free Session
+                    Schedule Session
                 </button>
                 
                 <p class="text-center text-xs text-gray-500 dark:text-gray-400">

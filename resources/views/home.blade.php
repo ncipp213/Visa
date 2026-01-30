@@ -58,15 +58,23 @@
         
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.3s">
-            <a href="#matcher" 
-               class="group bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover-lift inline-flex items-center justify-center border border-gray-200 dark:border-gray-700">
-                <i class="fas fa-search mr-3 text-blue-500 group-hover:scale-110 transition"></i> 
+    
+            <a href="#matcher"
+                class="group bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center border border-gray-100">
+                <i class="fas fa-search mr-3 text-blue-500 group-hover:scale-110 transition"></i>
                 Check Visa Eligibility
             </a>
-            <a href="https://wa.me/6512345678" 
-               class="group bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover-lift inline-flex items-center justify-center">
-                <i class="fab fa-whatsapp mr-3 group-hover:scale-110 transition"></i> 
+
+            <a href="https://wa.me/6512345678"
+                class="group bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center">
+                <i class="fab fa-whatsapp mr-3 group-hover:scale-110 transition"></i>
                 WhatsApp Consultation
+            </a>
+
+            <a href="#testimonials"
+                class="group bg-gradient-to-r from-blue-600 to-emerald-600 text-yellow-400 px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center">
+                <i class="fas fa-star mr-3 text-yellow-400 group-hover:scale-110 transition"></i>
+                Success Stories
             </a>
         </div>
         
@@ -87,58 +95,490 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Find Your Visa in 30 Seconds</h2>
                 <p class="text-gray-600 dark:text-gray-400">Get instant, personalized guidance based on your profile.</p>
             </div>
-            
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 hover-lift">
-                <form id="visaMatcherForm">
-                    <div class="grid md:grid-cols-3 gap-6 mb-8">
-                        <div>
-                            <label class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                                <i class="fas fa-globe-americas mr-2 text-blue-500"></i>Destination Country
-                            </label>
-                            <select class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition appearance-none">
-                                <option value="">Select Country</option>
-                                <option>🇨🇦 Canada</option>
-                                <option>🇦🇺 Australia</option>
-                                <option>🇬🇧 United Kingdom</option>
-                                <option>🇺🇸 United States</option>
-                                <option>🇩🇪 Germany</option>
-                                <option>🇸🇬 Singapore</option>
-                                <option>🇯🇵 Japan</option>
-                                <option>🇰🇷 South Korea</option>
-                            </select>
+
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 hover-lift">
+                    <form id="visaMatcherForm">
+                        <div class="grid md:grid-cols-3 gap-6 mb-8">
+                            <div>
+                                <label class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                                    <i class="fas fa-globe-americas mr-2 text-blue-500"></i>Destination Country
+                                </label>
+                                <select id="destinationCountry" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition appearance-none">
+                                    <option value="">Select Country</option>
+                                    <option value="all">All Country</option>
+                                    <option value="AF">🇦🇫 Afghanistan</option>
+                                    <option value="AL">🇦🇱 Albania</option>
+                                    <option value="DZ">🇩🇿 Algeria</option>
+                                    <option value="AD">🇦🇩 Andorra</option>
+                                    <option value="AO">🇦🇴 Angola</option>
+                                    <option value="AG">🇦🇬 Antigua and Barbuda</option>
+                                    <option value="AR">🇦🇷 Argentina</option>
+                                    <option value="AM">🇦🇲 Armenia</option>
+                                    <option value="AU">🇦🇺 Australia</option>
+                                    <option value="AT">🇦🇹 Austria</option>
+                                    <option value="AZ">🇦🇿 Azerbaijan</option>
+                                    <option value="BS">🇧🇸 Bahamas</option>
+                                    <option value="BH">🇧🇭 Bahrain</option>
+                                    <option value="BD">🇧🇩 Bangladesh</option>
+                                    <option value="BB">🇧🇧 Barbados</option>
+                                    <option value="BY">🇧🇾 Belarus</option>
+                                    <option value="BE">🇧🇪 Belgium</option>
+                                    <option value="BZ">🇧🇿 Belize</option>
+                                    <option value="BJ">🇧🇯 Benin</option>
+                                    <option value="BT">🇧🇹 Bhutan</option>
+                                    <option value="BO">🇧🇴 Bolivia</option>
+                                    <option value="BA">🇧🇦 Bosnia and Herzegovina</option>
+                                    <option value="BW">🇧🇼 Botswana</option>
+                                    <option value="BR">🇧🇷 Brazil</option>
+                                    <option value="BN">🇧🇳 Brunei</option>
+                                    <option value="BG">🇧🇬 Bulgaria</option>
+                                    <option value="BF">🇧🇫 Burkina Faso</option>
+                                    <option value="BI">🇧🇮 Burundi</option>
+                                    <option value="CV">🇨🇻 Cape Verde</option>
+                                    <option value="KH">🇰🇭 Cambodia</option>
+                                    <option value="CM">🇨🇲 Cameroon</option>
+                                    <option value="CA">🇨🇦 Canada</option>
+                                    <option value="CF">🇨🇫 Central African Republic</option>
+                                    <option value="TD">🇹🇩 Chad</option>
+                                    <option value="CL">🇨🇱 Chile</option>
+                                    <option value="CN">🇨🇳 China</option>
+                                    <option value="CO">🇨🇴 Colombia</option>
+                                    <option value="KM">🇰🇲 Comoros</option>
+                                    <option value="CG">🇨🇬 Congo - Brazzaville</option>
+                                    <option value="CD">🇨🇩 Congo - Kinshasa</option>
+                                    <option value="CR">🇨🇷 Costa Rica</option>
+                                    <option value="CI">🇨🇮 Côte d’Ivoire</option>
+                                    <option value="HR">🇭🇷 Croatia</option>
+                                    <option value="CU">🇨🇺 Cuba</option>
+                                    <option value="CY">🇨🇾 Cyprus</option>
+                                    <option value="CZ">🇨🇿 Czechia</option>
+                                    <option value="DK">🇩🇰 Denmark</option>
+                                    <option value="DJ">🇩🇯 Djibouti</option>
+                                    <option value="DM">🇩🇲 Dominica</option>
+                                    <option value="DO">🇩🇴 Dominican Republic</option>
+                                    <option value="EC">🇪🇨 Ecuador</option>
+                                    <option value="EG">🇪🇬 Egypt</option>
+                                    <option value="SV">🇸🇻 El Salvador</option>
+                                    <option value="GQ">🇬🇶 Equatorial Guinea</option>
+                                    <option value="ER">🇪🇷 Eritrea</option>
+                                    <option value="EE">🇪🇪 Estonia</option>
+                                    <option value="SZ">🇸🇿 Eswatini</option>
+                                    <option value="ET">🇪🇹 Ethiopia</option>
+                                    <option value="FJ">🇫🇯 Fiji</option>
+                                    <option value="FI">🇫🇮 Finland</option>
+                                    <option value="FR">🇫🇷 France</option>
+                                    <option value="GA">🇬🇦 Gabon</option>
+                                    <option value="GM">🇬🇲 Gambia</option>
+                                    <option value="GE">🇬🇪 Georgia</option>
+                                    <option value="DE">🇩🇪 Germany</option>
+                                    <option value="GH">🇬🇭 Ghana</option>
+                                    <option value="GR">🇬🇷 Greece</option>
+                                    <option value="GD">🇬🇩 Grenada</option>
+                                    <option value="GT">🇬🇹 Guatemala</option>
+                                    <option value="GN">🇬🇳 Guinea</option>
+                                    <option value="GW">🇬🇼 Guinea-Bissau</option>
+                                    <option value="GY">🇬🇾 Guyana</option>
+                                    <option value="HT">🇭🇹 Haiti</option>
+                                    <option value="HN">🇭🇳 Honduras</option>
+                                    <option value="HU">🇭🇺 Hungary</option>
+                                    <option value="IS">🇮🇸 Iceland</option>
+                                    <option value="IN">🇮🇳 India</option>
+                                    <option value="ID">🇮🇩 Indonesia</option>
+                                    <option value="IR">🇮🇷 Iran</option>
+                                    <option value="IQ">🇮🇶 Iraq</option>
+                                    <option value="IE">🇮🇪 Ireland</option>
+                                    <option value="IL">🇮🇱 Israel</option>
+                                    <option value="IT">🇮🇹 Italy</option>
+                                    <option value="JM">🇯🇲 Jamaica</option>
+                                    <option value="JP">🇯🇵 Japan</option>
+                                    <option value="JO">🇯🇴 Jordan</option>
+                                    <option value="KZ">🇰🇿 Kazakhstan</option>
+                                    <option value="KE">🇰🇪 Kenya</option>
+                                    <option value="KI">🇰🇮 Kiribati</option>
+                                    <option value="KP">🇰🇵 North Korea</option>
+                                    <option value="KR">🇰🇷 South Korea</option>
+                                    <option value="KW">🇰🇼 Kuwait</option>
+                                    <option value="KG">🇰🇬 Kyrgyzstan</option>
+                                    <option value="LA">🇱🇦 Laos</option>
+                                    <option value="LV">🇱🇻 Latvia</option>
+                                    <option value="LB">🇱🇧 Lebanon</option>
+                                    <option value="LS">🇱🇸 Lesotho</option>
+                                    <option value="LR">🇱🇷 Liberia</option>
+                                    <option value="LY">🇱🇾 Libya</option>
+                                    <option value="LI">🇱🇮 Liechtenstein</option>
+                                    <option value="LT">🇱🇹 Lithuania</option>
+                                    <option value="LU">🇱🇺 Luxembourg</option>
+                                    <option value="MG">🇲🇬 Madagascar</option>
+                                    <option value="MW">🇲🇼 Malawi</option>
+                                    <option value="MY">🇲🇾 Malaysia</option>
+                                    <option value="MV">🇲🇻 Maldives</option>
+                                    <option value="ML">🇲🇱 Mali</option>
+                                    <option value="MT">🇲🇹 Malta</option>
+                                    <option value="MH">🇲🇭 Marshall Islands</option>
+                                    <option value="MR">🇲🇷 Mauritania</option>
+                                    <option value="MU">🇲🇺 Mauritius</option>
+                                    <option value="MX">🇲🇽 Mexico</option>
+                                    <option value="FM">🇫🇲 Micronesia</option>
+                                    <option value="MD">🇲🇩 Moldova</option>
+                                    <option value="MC">🇲🇨 Monaco</option>
+                                    <option value="MN">🇲🇳 Mongolia</option>
+                                    <option value="ME">🇲🇪 Montenegro</option>
+                                    <option value="MA">🇲🇦 Morocco</option>
+                                    <option value="MZ">🇲🇿 Mozambique</option>
+                                    <option value="MM">🇲🇲 Myanmar</option>
+                                    <option value="NA">🇳🇦 Namibia</option>
+                                    <option value="NR">🇳🇷 Nauru</option>
+                                    <option value="NP">🇳🇵 Nepal</option>
+                                    <option value="NL">🇳🇱 Netherlands</option>
+                                    <option value="NZ">🇳🇿 New Zealand</option>
+                                    <option value="NI">🇳🇮 Nicaragua</option>
+                                    <option value="NE">🇳🇪 Niger</option>
+                                    <option value="NG">🇳🇬 Nigeria</option>
+                                    <option value="MK">🇲🇰 North Macedonia</option>
+                                    <option value="NO">🇳🇴 Norway</option>
+                                    <option value="OM">🇴🇲 Oman</option>
+                                    <option value="PK">🇵🇰 Pakistan</option>
+                                    <option value="PW">🇵🇼 Palau</option>
+                                    <option value="PA">🇵🇦 Panama</option>
+                                    <option value="PG">🇵🇬 Papua New Guinea</option>
+                                    <option value="PY">🇵🇾 Paraguay</option>
+                                    <option value="PE">🇵🇪 Peru</option>
+                                    <option value="PH">🇵🇭 Philippines</option>
+                                    <option value="PL">🇵🇱 Poland</option>
+                                    <option value="PT">🇵🇹 Portugal</option>
+                                    <option value="QA">🇶🇦 Qatar</option>
+                                    <option value="RO">🇷🇴 Romania</option>
+                                    <option value="RU">🇷🇺 Russia</option>
+                                    <option value="RW">🇷🇼 Rwanda</option>
+                                    <option value="KN">🇰🇳 Saint Kitts and Nevis</option>
+                                    <option value="LC">🇱🇨 Saint Lucia</option>
+                                    <option value="VC">🇻🇨 Saint Vincent and the Grenadines</option>
+                                    <option value="WS">🇼🇸 Samoa</option>
+                                    <option value="SM">🇸🇲 San Marino</option>
+                                    <option value="ST">🇸🇹 São Tomé and Príncipe</option>
+                                    <option value="SA">🇸🇦 Saudi Arabia</option>
+                                    <option value="SN">🇸🇳 Senegal</option>
+                                    <option value="SO">🇸🇴 Somalia</option>
+                                    <option value="SR">🇸🇷 Suriname</option>
+                                    <option value="SS">🇸🇸 South Sudan</option>
+                                    <option value="ST">🇸🇹 São Tomé and Príncipe</option>
+                                    <option value="SV">🇸🇻 El Salvador</option>
+                                    <option value="SX">🇸🇽 Sint Maarten (Dutch part)</option>
+                                    <option value="SY">🇸🇾 Syrian Arab Republic</option>
+                                    <option value="SZ">🇸🇿 Eswatini</option>
+                                    <option value="TC">🇹🇨 Turks and Caicos Islands</option>
+                                    <option value="TD">🇹🇩 Chad</option>
+                                    <option value="TF">🇹🇫 French Southern Territories</option>
+                                    <option value="TG">🇹🇬 Togo</option>
+                                    <option value="TH">🇹🇭 Thailand</option>
+                                    <option value="TJ">🇹🇯 Tajikistan</option>
+                                    <option value="TK">🇹🇰 Tokelau</option>
+                                    <option value="TL">🇹🇱 Timor-Leste</option>
+                                    <option value="TM">🇹🇲 Turkmenistan</option>
+                                    <option value="TN">🇹🇳 Tunisia</option>
+                                    <option value="TO">🇹🇴 Tonga</option>
+                                    <option value="TR">🇹🇷 Türkiye</option>
+                                    <option value="TT">🇹🇹 Trinidad and Tobago</option>
+                                    <option value="TV">🇹🇻 Tuvalu</option>
+                                    <option value="TW">🇹🇼 Taiwan</option>
+                                    <option value="TZ">🇹🇿 Tanzania</option>
+                                    <option value="UA">🇺🇦 Ukraine</option>
+                                    <option value="UG">🇺🇬 Uganda</option>
+                                    <option value="UM">🇺🇲 U.S. Minor Outlying Islands</option>
+                                    <option value="US">🇺🇸 United States</option>
+                                    <option value="UY">🇺🇾 Uruguay</option>
+                                    <option value="UZ">🇺🇿 Uzbekistan</option>
+                                    <option value="VA">🇻🇦 Holy See</option>
+                                    <option value="VC">🇻🇨 Saint Vincent and the Grenadines</option>
+                                    <option value="VE">🇻🇪 Venezuela</option>
+                                    <option value="VG">🇻🇬 British Virgin Islands</option>
+                                    <option value="VI">🇻🇮 U.S. Virgin Islands</option>
+                                    <option value="VN">🇻🇳 Vietnam</option>
+                                    <option value="VU">🇻🇺 Vanuatu</option>
+                                    <option value="WF">🇼🇫 Wallis and Futuna</option>
+                                    <option value="WS">🇼🇸 Samoa</option>
+                                    <option value="YE">🇾🇪 Yemen</option>
+                                    <option value="YT">🇾🇹 Mayotte</option>
+                                    <option value="ZA">🇿🇦 South Africa</option>
+                                    <option value="ZM">🇿🇲 Zambia</option>
+                                    <option value="ZW">🇿🇼 Zimbabwe</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                                    <i class="fas fa-briefcase mr-2 text-blue-500"></i>Visa Purpose
+                                </label>
+                                <select id="visaPurpose" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                    <option value="">Select Purpose</option>
+                                    <option value="study">🎓 Study</option>
+                                    <option value="work">💼 Work</option>
+                                    <option value="business">🏢 Business</option>
+                                    <option value="tourism">✈️ Visit/Tourism</option>
+                                    <option value="investment">💰 Investment</option>
+                                    <option value="family">👨‍👩‍👧‍👦 Family</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                                    <i class="fas fa-passport mr-2 text-blue-500"></i>Your Nationality
+                                </label>
+                                <select id="nationality" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                    <option value="">Select Nationality</option>
+                                    <!-- Options akan diisi oleh JavaScript berdasarkan visa purpose -->
+                                </select>
+                            </div>
                         </div>
+                    </form>
+                </div>
+
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const visaPurposeSelect = document.getElementById('visaPurpose');
+                    const nationalitySelect = document.getElementById('nationality');
+                    
+                    // Data negara berdasarkan kategori
+                    const allCountries = [
+                    {value: 'all', label: 'All Country', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'afghanistan', label: '🇦🇫 Afghanistan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'albania', label: '🇦🇱 Albania', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'algeria', label: '🇩🇿 Algeria', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'andorra', label: '🇦🇩 Andorra', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'angola', label: '🇦🇴 Angola', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'antigua and barbuda', label: '🇦🇬 Antigua and Barbuda', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'argentina', label: '🇦🇷 Argentina', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'armenia', label: '🇦🇲 Armenia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'australia', label: '🇦🇺 Australia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'austria', label: '🇦🇹 Austria', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'azerbaijan', label: '🇦🇿 Azerbaijan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bahamas', label: '🇧🇸 Bahamas', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bahrain', label: '🇧🇭 Bahrain', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bangladesh', label: '🇧🇩 Bangladesh', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'barbados', label: '🇧🇧 Barbados', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'belarus', label: '🇧🇾 Belarus', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'belgium', label: '🇧🇪 Belgium', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'belize', label: '🇧🇿 Belize', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'benin', label: '🇧🇯 Benin', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bhutan', label: '🇧🇹 Bhutan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bolivia', label: '🇧🇴 Bolivia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bosnia and herzegovina', label: '🇧🇦 Bosnia and Herzegovina', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'botswana', label: '🇧🇼 Botswana', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'brazil', label: '🇧🇷 Brazil', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'brunei', label: '🇧🇳 Brunei', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'bulgaria', label: '🇧🇬 Bulgaria', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'burkina faso', label: '🇧🇫 Burkina Faso', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'burundi', label: '🇧🇮 Burundi', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'cape verde', label: '🇨🇻 Cape Verde', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'cambodia', label: '🇰🇭 Cambodia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'cameroon', label: '🇨🇲 Cameroon', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'canada', label: '🇨🇦 Canada', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'central african republic', label: '🇨🇫 Central African Republic', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'chad', label: '🇹🇩 Chad', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'chile', label: '🇨🇱 Chile', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'china', label: '🇨🇳 China', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'colombia', label: '🇨🇴 Colombia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'comoros', label: '🇰🇲 Comoros', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'congo - brazzaville', label: '🇨🇬 Congo - Brazzaville', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'congo - kinshasa', label: '🇨🇩 Congo - Kinshasa', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'costa rica', label: '🇨🇷 Costa Rica', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'côte d’ivoire', label: '🇨🇮 Côte d’Ivoire', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'croatia', label: '🇭🇷 Croatia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'cuba', label: '🇨🇺 Cuba', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'cyprus', label: '🇨🇾 Cyprus', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'czechia', label: '🇨🇿 Czechia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'denmark', label: '🇩🇰 Denmark', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'djibouti', label: '🇩🇯 Djibouti', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'dominica', label: '🇩🇲 Dominica', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'dominican republic', label: '🇩🇴 Dominican Republic', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'ecuador', label: '🇪🇨 Ecuador', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'egypt', label: '🇪🇬 Egypt', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'el salvador', label: '🇸🇻 El Salvador', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'equatorial guinea', label: '🇬🇶 Equatorial Guinea', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'eritrea', label: '🇪🇷 Eritrea', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'estonia', label: '🇪🇪 Estonia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'eswatini', label: '🇸🇿 Eswatini', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'ethiopia', label: '🇪🇹 Ethiopia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'fiji', label: '🇫🇯 Fiji', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'finland', label: '🇫🇮 Finland', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'france', label: '🇫🇷 France', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'gabon', label: '🇬🇦 Gabon', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'gambia', label: '🇬🇲 Gambia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'georgia', label: '🇬🇪 Georgia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'germany', label: '🇩🇪 Germany', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'ghana', label: '🇬🇭 Ghana', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'greece', label: '🇬🇷 Greece', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'grenada', label: '🇬🇩 Grenada', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'guatemala', label: '🇬🇹 Guatemala', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'guinea', label: '🇬🇳 Guinea', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'guinea-bissau', label: '🇬🇼 Guinea-Bissau', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'guyana', label: '🇬🇾 Guyana', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'haiti', label: '🇭🇹 Haiti', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'honduras', label: '🇭🇳 Honduras', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'hungary', label: '🇭🇺 Hungary', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'iceland', label: '🇮🇸 Iceland', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'india', label: '🇮🇳 India', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'indonesia', label: '🇮🇩 Indonesia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'iran', label: '🇮🇷 Iran', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'iraq', label: '🇮🇶 Iraq', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'ireland', label: '🇮🇪 Ireland', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'israel', label: '🇮🇱 Israel', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'italy', label: '🇮🇹 Italy', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'jamaica', label: '🇯🇲 Jamaica', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'japan', label: '🇯🇵 Japan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'jordan', label: '🇯🇴 Jordan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'kazakhstan', label: '🇰🇿 Kazakhstan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'kenya', label: '🇰🇪 Kenya', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'kiribati', label: '🇰🇮 Kiribati', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'north korea', label: '🇰🇵 North Korea', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'south korea', label: '🇰🇷 South Korea', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'kuwait', label: '🇰🇼 Kuwait', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'kyrgyzstan', label: '🇰🇬 Kyrgyzstan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'laos', label: '🇱🇦 Laos', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'latvia', label: '🇱🇻 Latvia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'lebanon', label: '🇱🇧 Lebanon', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'lesotho', label: '🇱🇸 Lesotho', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'liberia', label: '🇱🇷 Liberia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'libya', label: '🇱🇾 Libya', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'liechtenstein', label: '🇱🇮 Liechtenstein', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'lithuania', label: '🇱🇹 Lithuania', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'luxembourg', label: '🇱🇺 Luxembourg', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'madagascar', label: '🇲🇬 Madagascar', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'malawi', label: '🇲🇼 Malawi', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'malaysia', label: '🇲🇾 Malaysia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'maldives', label: '🇲🇻 Maldives', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mali', label: '🇲🇱 Mali', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'malta', label: '🇲🇹 Malta', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'marshall islands', label: '🇲🇭 Marshall Islands', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mauritania', label: '🇲🇷 Mauritania', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mauritius', label: '🇲🇺 Mauritius', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mexico', label: '🇲🇽 Mexico', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'micronesia', label: '🇫🇲 Micronesia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'moldova', label: '🇲🇩 Moldova', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'monaco', label: '🇲🇨 Monaco', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mongolia', label: '🇲🇳 Mongolia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'montenegro', label: '🇲🇪 Montenegro', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'morocco', label: '🇲🇦 Morocco', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mozambique', label: '🇲🇿 Mozambique', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'myanmar', label: '🇲🇲 Myanmar', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'namibia', label: '🇳🇦 Namibia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'nauru', label: '🇳🇷 Nauru', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'nepal', label: '🇳🇵 Nepal', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'netherlands', label: '🇳🇱 Netherlands', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'new zealand', label: '🇳🇿 New Zealand', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'nicaragua', label: '🇳🇮 Nicaragua', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'niger', label: '🇳🇪 Niger', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'nigeria', label: '🇳🇬 Nigeria', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'north macedonia', label: '🇲🇰 North Macedonia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'norway', label: '🇳🇴 Norway', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'oman', label: '🇴🇲 Oman', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'pakistan', label: '🇵🇰 Pakistan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'palau', label: '🇵🇼 Palau', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'panama', label: '🇵🇦 Panama', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'papua new guinea', label: '🇵🇬 Papua New Guinea', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'paraguay', label: '🇵🇾 Paraguay', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'peru', label: '🇵🇪 Peru', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'philippines', label: '🇵🇭 Philippines', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'poland', label: '🇵🇱 Poland', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'portugal', label: '🇵🇹 Portugal', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'qatar', label: '🇶🇦 Qatar', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'romania', label: '🇷🇴 Romania', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'russia', label: '🇷🇺 Russia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'rwanda', label: '🇷🇼 Rwanda', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'saint kitts and nevis', label: '🇰🇳 Saint Kitts and Nevis', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'saint lucia', label: '🇱🇨 Saint Lucia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'saint vincent and the grenadines', label: '🇻🇨 Saint Vincent and the Grenadines', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'samoa', label: '🇼🇸 Samoa', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'san marino', label: '🇸🇲 San Marino', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'são tomé and príncipe', label: '🇸🇹 São Tomé and Príncipe', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'saudi arabia', label: '🇸🇦 Saudi Arabia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'senegal', label: '🇸🇳 Senegal', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'somalia', label: '🇸🇴 Somalia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'suriname', label: '🇸🇷 Suriname', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'south sudan', label: '🇸🇸 South Sudan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'são tomé and príncipe', label: '🇸🇹 São Tomé and Príncipe', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}}, 
+                    {value: 'el salvador', label: '🇸🇻 El Salvador', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}}, 
+                    {value: 'sint maarten (dutch part)', label: '🇸🇽 Sint Maarten (Dutch part)', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'syrian arab republic', label: '🇸🇾 Syrian Arab Republic', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'eswatini', label: '🇸🇿 Eswatini', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'turks and caicos islands', label: '🇹🇨 Turks and Caicos Islands', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'chad', label: '🇹🇩 Chad', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}}, 
+                    {value: 'french southern territories', label: '🇹🇫 French Southern Territories', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'togo', label: '🇹🇬 Togo', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'thailand', label: '🇹🇭 Thailand', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'tajikistan', label: '🇹🇯 Tajikistan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'tokelau', label: '🇹🇰 Tokelau', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'timor-leste', label: '🇹🇱 Timor-Leste', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'turkmenistan', label: '🇹🇲 Turkmenistan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'tunisia', label: '🇹🇳 Tunisia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'tonga', label: '🇹🇴 Tonga', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'türkiye', label: '🇹🇷 Türkiye', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'trinidad and tobago', label: '🇹🇹 Trinidad and Tobago', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'tuvalu', label: '🇹🇻 Tuvalu', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'taiwan', label: '🇹🇼 Taiwan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'tanzania', label: '🇹🇿 Tanzania', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'ukraine', label: '🇺🇦 Ukraine', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'uganda', label: '🇺🇬 Uganda', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'u.s. minor outlying islands', label: '🇺🇲 U.S. Minor Outlying Islands', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'united states', label: '🇺🇸 United States', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'uruguay', label: '🇺🇾 Uruguay', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'uzbekistan', label: '🇺🇿 Uzbekistan', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'holy see', label: '🇻🇦 Holy See', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'saint vincent and the grenadines', label: '🇻🇨 Saint Vincent and the Grenadines', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}}, 
+                    {value: 'venezuela', label: '🇻🇪 Venezuela', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'british virgin islands', label: '🇻🇬 British Virgin Islands', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'u.s. virgin islands', label: '🇻🇮 U.S. Virgin Islands', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'vietnam', label: '🇻🇳 Vietnam', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'vanuatu', label: '🇻🇺 Vanuatu', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'wallis and futuna', label: '🇼🇫 Wallis and Futuna', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'samoa', label: '🇼🇸 Samoa', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}}, 
+                    {value: 'yemen', label: '🇾🇪 Yemen', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'mayotte', label: '🇾🇹 Mayotte', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'south africa', label: '🇿🇦 South Africa', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'zambia', label: '🇿🇲 Zambia', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}},
+                    {value: 'zimbabwe', label: '🇿🇼 Zimbabwe', flags: {study: true, work: true, business: true, tourism: true, investment: true, family: true}}
+                    ];
+
+                    // Fungsi untuk mengisi dropdown nationality berdasarkan purpose
+                    function updateNationalityOptions() {
+                        const purpose = visaPurposeSelect.value;
+                        nationalitySelect.innerHTML = '<option value="">Select Nationality</option>';
                         
-                        <div>
-                            <label class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                                <i class="fas fa-briefcase mr-2 text-blue-500"></i>Visa Purpose
-                            </label>
-                            <select class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
-                                <option value="">Select Purpose</option>
-                                <option>🎓 Study</option>
-                                <option>💼 Work</option>
-                                <option>🏢 Business</option>
-                                <option>✈️ Visit/Tourism</option>
-                                <option>💰 Investment</option>
-                                <option>👨‍👩‍👧‍👦 Family</option>
-                            </select>
-                        </div>
+                        if (!purpose) return;
                         
-                        <div>
-                            <label class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                                <i class="fas fa-passport mr-2 text-blue-500"></i>Your Nationality
-                            </label>
-                            <select class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
-                                <option value="">Select Nationality</option>
-                                <option>🇮🇩 Indonesian</option>
-                                <option>🇮🇳 Indian</option>
-                                <option>🇻🇳 Vietnamese</option>
-                                <option>🇨🇳 Chinese</option>
-                                <option>🇵🇭 Philippine</option>
-                                <option>🇲🇾 Malaysian</option>
-                                <option>🇹🇭 Thai</option>
-                            </select>
-                        </div>
-                    </div>
+                        let filteredCountries;
+                        
+                        if (purpose === 'study') {
+                            // Study: hanya India, Nepal, Bangladesh, Indonesia
+                            filteredCountries = allCountries.filter(country => 
+                                ['india', 'nepal', 'bangladesh', 'indonesia'].includes(country.value)
+                            );
+                        } else if (purpose === 'work') {
+                            // Work: India, Nepal, Bangladesh, China, Pakistan, Indonesia
+                            filteredCountries = allCountries.filter(country => 
+                                ['india', 'nepal', 'bangladesh', 'china', 'pakistan', 'indonesia'].includes(country.value)
+                            );
+                        } else {
+                            // Business, Tourism, Investment, Family: All Countrys
+                            filteredCountries = allCountries;
+                        }
+                        
+                        // Tambahkan opsi ke dropdown
+                        filteredCountries.forEach(country => {
+                            const option = document.createElement('option');
+                            option.value = country.value;
+                            option.textContent = country.label;
+                            nationalitySelect.appendChild(option);
+                        });
+                    }
+                    
+                    // Event listener untuk perubahan visa purpose
+                    visaPurposeSelect.addEventListener('change', updateNationalityOptions);
+                    
+                    // Inisialisasi awal
+                    updateNationalityOptions();
+                });
+                </script>
                     
                     <div class="text-center">
                         <button type="submit" 
@@ -264,6 +704,11 @@
                 </div>
                 
                 <div class="space-y-4">
+                    @php
+                        $whatsappNumber = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
+                        $whatsappMessage = 'Halo, saya tertarik dengan layanan visa Anda: ';
+                    @endphp
+                    
                     @foreach([
                         ['icon' => 'graduation-cap', 'title' => 'Study Visa', 'desc' => 'Pursue education at top universities worldwide', 'color' => 'blue'],
                         ['icon' => 'briefcase', 'title' => 'Work Visa', 'desc' => 'Secure international employment opportunities', 'color' => 'green'],
@@ -271,20 +716,25 @@
                         ['icon' => 'chart-line', 'title' => 'Business Visa', 'desc' => 'Expand your business operations globally', 'color' => 'yellow'],
                         ['icon' => 'handshake', 'title' => 'Investment Visa', 'desc' => 'Invest or start business overseas', 'color' => 'red']
                     ] as $service)
-                    <div class="service-card group p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-{{ $service['color'] }}-300 dark:hover:border-{{ $service['color'] }}-500 transition duration-300 cursor-pointer hover-lift">
+                    <a 
+                        href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage . $service['title'] . ' - ' . $service['desc']) }}" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="service-card group p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-{{ $service['color'] }}-300 dark:hover:border-{{ $service['color'] }}-500 transition duration-300 cursor-pointer hover-lift block hover:no-underline"
+                    >
                         <div class="flex items-center">
                             <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-{{ $service['color'] }}-100 dark:bg-{{ $service['color'] }}-900/20 flex items-center justify-center mr-4 group-hover:scale-110 transition">
                                 <i class="fas fa-{{ $service['icon'] }} text-{{ $service['color'] }}-600 dark:text-{{ $service['color'] }}-400 text-lg"></i>
                             </div>
                             <div class="flex-grow">
-                                <h4 class="font-bold text-lg mb-1">{{ $service['title'] }}</h4>
+                                <h4 class="font-bold text-lg mb-1 text-gray-800 dark:text-white">{{ $service['title'] }}</h4>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">{{ $service['desc'] }}</p>
                             </div>
                             <div class="opacity-0 group-hover:opacity-100 transition">
                                 <i class="fas fa-arrow-right text-gray-400"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                 </div>
             </div>
@@ -302,6 +752,12 @@
                 </div>
                 
                 <div class="space-y-4">
+                    @php
+                        // Gunakan variabel yang sama atau buat berbeda
+                        $whatsappNumber = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
+                        $whatsappMessage = 'Halo, saya tertarik dengan layanan visa Indonesia Anda: ';
+                    @endphp
+                    
                     @foreach([
                         ['icon' => 'plane', 'title' => 'Visit Visa', 'desc' => 'Short-term visits for tourism or business', 'color' => 'blue'],
                         ['icon' => 'id-card', 'title' => 'KITAS (1 Year)', 'desc' => 'Temporary stay permit for 1 year', 'color' => 'green'],
@@ -311,20 +767,25 @@
                         ['icon' => 'file-contract', 'title' => 'C1 Visa', 'desc' => 'For foreign experts and consultants', 'color' => 'indigo'],
                         ['icon' => 'file-alt', 'title' => 'D12 Visa', 'desc' => 'For foreign workers and professionals', 'color' => 'pink']
                     ] as $service)
-                    <div class="service-card group p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-{{ $service['color'] }}-300 dark:hover:border-{{ $service['color'] }}-500 transition duration-300 cursor-pointer hover-lift">
+                    <a 
+                        href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage . $service['title'] . ' - ' . $service['desc']) }}" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="service-card group p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-{{ $service['color'] }}-300 dark:hover:border-{{ $service['color'] }}-500 transition duration-300 cursor-pointer hover-lift block hover:no-underline"
+                    >
                         <div class="flex items-center">
                             <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-{{ $service['color'] }}-100 dark:bg-{{ $service['color'] }}-900/20 flex items-center justify-center mr-4 group-hover:scale-110 transition">
                                 <i class="fas fa-{{ $service['icon'] }} text-{{ $service['color'] }}-600 dark:text-{{ $service['color'] }}-400 text-lg"></i>
                             </div>
                             <div class="flex-grow">
-                                <h4 class="font-bold text-lg mb-1">{{ $service['title'] }}</h4>
+                                <h4 class="font-bold text-lg mb-1 text-gray-800 dark:text-white">{{ $service['title'] }}</h4>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">{{ $service['desc'] }}</p>
                             </div>
                             <div class="opacity-0 group-hover:opacity-100 transition">
                                 <i class="fas fa-arrow-right text-gray-400"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                 </div>
             </div>
@@ -350,10 +811,10 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach([
-                ['country' => 'Canada', 'type' => 'Study Visa', 'time' => '21 Days', 'flag' => '🇨🇦', 'client' => 'Rina S.', 'icon' => 'graduation-cap', 'color' => 'blue'],
+                ['country' => 'Canada', 'type' => 'Visit Visa', 'time' => '21 Days', 'flag' => '🇨🇦', 'client' => 'Rina S.', 'icon' => 'plane', 'color' => 'blue'],
                 ['country' => 'Australia', 'type' => 'Visit Visa', 'time' => '14 Days', 'flag' => '🇦🇺', 'client' => 'Ahmad R.', 'icon' => 'plane', 'color' => 'green'],
                 ['country' => 'Germany', 'type' => 'Work Visa', 'time' => '30 Days', 'flag' => '🇩🇪', 'client' => 'David L.', 'icon' => 'briefcase', 'color' => 'yellow'],
-                ['country' => 'Singapore', 'type' => 'Business Visa', 'time' => '10 Days', 'flag' => '🇸🇬', 'client' => 'Priya K.', 'icon' => 'chart-line', 'color' => 'purple']
+                ['country' => 'Singapore', 'type' => 'Study Visa', 'time' => '10 Days', 'flag' => '🇸🇬', 'client' => 'Priya K.', 'icon' => 'graduation-cap', 'color' => 'purple']
             ] as $case)
             <div class="success-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 relative overflow-hidden group hover-lift">
                 <!-- Bendera kecil di pojok kiri atas -->
@@ -427,7 +888,7 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3">Student Visa</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">Starting from competitive market rates</p>
-                        <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">$500<span class="text-lg text-gray-500">+</span></div>
+                        <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">$5000</div>
                         <ul class="text-left space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full documentation support</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> University application</li>
@@ -445,7 +906,7 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3">Work Visa</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">Based on country & profile</p>
-                        <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$800<span class="text-lg text-gray-500">+</span></div>
+                        <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$9,500</div>
                         <ul class="text-left space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Job search assistance</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Legal processing</li>
@@ -463,7 +924,7 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3">Business / Investment</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">Customized legal packages</p>
-                        <div class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">$1,500<span class="text-lg text-gray-500">+</span></div>
+                        <div class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">$10,000 to $16,000</div>
                         <ul class="text-left space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tailored to your needs</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Business setup included</li>
@@ -596,17 +1057,305 @@
                 </a>
             </div>
 
-            <!-- Card 3: Book Free Appointment (TRIGGERS MODAL) -->
+            <!-- Card 3: Book Appointment (TRIGGERS MODAL) -->
             <div onclick="openConsultationModal()" class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-8 rounded-2xl text-center hover-lift cursor-pointer transform hover:-translate-y-2 transition duration-300 group">
                 <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
                     <i class="fas fa-calendar-check text-2xl"></i>
                 </div>
-                <h4 class="font-bold text-lg mb-2">Book Free Appointment</h4>
-                <p class="text-blue-100 text-sm mb-6">Schedule a 30-min free consultation session.</p>
+                <h4 class="font-bold text-lg mb-2">Book Appointment</h4>
+                <p class="text-blue-100 text-sm mb-6">Schedule a 30-min consultation session.</p>
                 <button class="bg-white text-blue-600 hover:bg-gray-100 px-5 py-2 rounded-lg font-medium transition">
                     Book Now
                 </button>
             </div>
+            <!-- Modal untuk Consultation Booking -->
+            <div id="consultationModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+                <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                    <!-- Background overlay -->
+                    <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                        <div class="absolute inset-0 bg-gray-500 opacity-75" onclick="closeConsultationModal()"></div>
+                    </div>
+
+                    <!-- Modal panel -->
+                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                        <!-- Modal header -->
+                        <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">Book Consultation</h3>
+                                <button onclick="closeConsultationModal()" 
+                                    class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-200 focus:outline-none">
+                                    <span class="text-xl" style="line-height: 0; margin-top: -2px;">&times;</span>
+                                </button>
+                            </div>
+                            <p class="text-blue-100 text-sm mt-1">30 minutes with our visa expert</p>
+                        </div>
+
+                        <!-- Form -->
+                        <form id="consultationForm" class="px-6 py-4">
+                            @csrf
+                            
+                            <!-- Full Name -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Full Name *</label>
+                                <input type="text" name="name" required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" name="email" required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" name="phone"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Visa Interest -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Visa Interest</label>
+                                <select name="visa_type" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select a visa type</option>
+                                    <option value="Student Visa">Student Visa</option>
+                                    <option value="Work Visa">Work Visa</option>
+                                    <option value="Tourist Visa">Tourist Visa</option>
+                                    <option value="Business Visa">Business Visa</option>
+                                </select>
+                            </div>
+
+                            <!-- Preferred Date & Time -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Preferred Date & Time</label>
+                                <input type="datetime-local" name="date" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div class="container py-5">
+                                <div class="row g-4 justify-content-center">
+                                    
+                                    <div class="row g-2 justify-content-center"> <div class="col-6"> <div class="card rounded-3 h-100 border-warning card-selectable position-relative" style="border: 2px solid #ffc107;">
+                                        <div class="position-absolute" style="top: 5px; right: 5px; z-index: 5;">
+                                            <div class="bg-warning rounded-pill px-2 py-1 shadow-sm">
+                                                <span class="text-dark fw-bold d-flex align-items-center" style="font-size: 0.6rem; white-space: nowrap;">
+                                                    ★ RECOMMENDED
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-body d-flex flex-column justify-content-center align-items-center p-2 text-center">
+                                            <h2 class="fw-bold mb-1" style="font-size: 1.8rem; color: #ffc107;">$30</h2>
+                                            <h6 class="fw-semibold mb-0" style="font-size: 0.9rem;">Priority Book</h6>
+                                            <p class="text-muted mb-0" style="font-size: 0.75rem;">Fastest response</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="card rounded-3 h-100 border-gray-300 card-selectable position-relative" style="border: 1px solid #e0e0e0;">
+                                        <div class="position-absolute" style="bottom: 8px; right: 8px;">
+                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 18px; height: 18px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" viewBox="0 0 16 16">
+                                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-body d-flex flex-column justify-content-center align-items-center p-2 text-center">
+                                            <h2 class="fw-bold mb-1" style="font-size: 1.8rem; color: #333;">$15</h2>
+                                            <h6 class="fw-semibold mb-0" style="font-size: 0.9rem;">Normal Book</h6>
+                                            <p class="text-muted mb-0" style="font-size: 0.75rem;">Standard response</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                </div>
+                            </div>
+
+                            <style>
+                            /* Card Styling - Aesthetic */
+                            .card {
+                                min-height: 160px;
+                                max-width: 450px; 
+                                margin: 0 auto;
+                                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                                cursor: pointer;
+                                background: white;
+                            }
+
+                            /* Border radius yang smooth */
+                            .rounded-3 {
+                                border-radius: 12px !important;
+                            }
+
+                            /* Border colors */
+                            .border-gray-300 {
+                                border-color: #e0e0e0 !important;
+                            }
+
+                            .border-warning {
+                                border-color: #ffc107 !important;
+                            }
+
+                            /* Recommended badge - minimal dan rapi */
+                            .bg-warning {
+                                background-color: #ffc107 !important;
+                                opacity: 0.95;
+                            }
+
+                            /* Checkmark - minimal */
+                            .bg-primary {
+                                background-color: #0d6efd !important;
+                            }
+
+                            /* Hover effects - smooth dan aesthetic */
+                            .card-selectable:hover {
+                                transform: translateY(-4px);
+                                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+                            }
+
+                            /* Active state */
+                            .card-selectable.active {
+                                border-color: #0d6efd !important;
+                                border-width: 2px !important;
+                                box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15) !important;
+                            }
+
+                            /* Text styling */
+                            h2 {
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+                            }
+
+                            /* Responsive */
+                            @media (max-width: 768px) {
+                                .card {
+                                    min-height: 150px;
+                                }
+                                
+                                h2 {
+                                    font-size: 2.2rem !important;
+                                }
+                            }
+                            </style>
+
+                            <script>
+                            // Card selection functionality
+                            document.querySelectorAll('.card-selectable').forEach(card => {
+                                card.addEventListener('click', function() {
+                                    // Remove active class from all cards
+                                    document.querySelectorAll('.card-selectable').forEach(c => {
+                                        c.classList.remove('active');
+                                    });
+                                    
+                                    // Add active class to clicked card
+                                    this.classList.add('active');
+                                    
+                                    // Get selected type
+                                    const isPriority = this.classList.contains('border-warning');
+                                    console.log(isPriority ? 'Priority Book selected' : 'Normal Book selected');
+                                    
+                                    // Optional: Add your booking logic here
+                                });
+                            });
+                            </script>
+
+                            <!-- Note -->
+                            <div class="mb-4">
+                                <div class="alert alert-danger d-flex align-items-center rounded-4 border-0 py-2 px-3" role="alert" style="background-color: #fff5f5; color: #d93025;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-x-fill me-2 flex-shrink-0" viewBox="0 0 16 16">
+                                        <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM6.854 8.146 8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 1 1 .708-.708z"/>
+                                    </svg>
+                                    <div style="font-size: 0.85rem; font-weight: 500;">
+                                        <span class="fw-bold">Note:</span> We are closed on Saturdays & public holidays.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Notes -->
+                            <div class="mb-6">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Additional Notes (Optional)</label>
+                                <textarea name="notes" rows="3"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="px-4 py-4 bg-gray-50 text-center sm:px-6">
+                                <button type="submit"
+                                    class="inline-flex justify-center py-2.5 px-10 border border-transparent shadow-md text-sm font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-0.5 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    Schedule Session
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            // Modal Functions
+            function openConsultationModal() {
+                document.getElementById('consultationModal').classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeConsultationModal() {
+                document.getElementById('consultationModal').classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            // Close modal on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeConsultationModal();
+                }
+            });
+
+            // Form Submission
+            document.getElementById('consultationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                
+                // Show loading
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span>Processing...</span>';
+                submitBtn.disabled = true;
+                
+                // AJAX request
+                fetch('{{ route("book.consultation") }}', {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                    },
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('✅ ' + data.message);
+                        closeConsultationModal();
+                        this.reset();
+                    } else {
+                        alert('❌ ' + (data.message || 'Booking failed. Please try again.'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('❌ An error occurred. Please try again.');
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+            });
+            </script>
 
             <!-- Card 4: Visit Office -->
             <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 text-center hover-lift group">
