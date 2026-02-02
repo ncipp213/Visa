@@ -71,19 +71,11 @@
                 WhatsApp Consultation
             </a>
 
-            <a href="#testimonials"
+            <a href="javascript:void(0)" onclick="openModal()"
                 class="group bg-gradient-to-r from-blue-600 to-emerald-600 text-yellow-400 px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center">
                 <i class="fas fa-star mr-3 text-yellow-400 group-hover:scale-110 transition"></i>
                 Success Stories
             </a>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="mt-20 animate-bounce">
-            <a href="#matcher" class="inline-block">
-                <i class="fas fa-chevron-down text-gray-400 dark:text-gray-500 text-xl"></i>
-            </a>
-        </div>
     </div>
 </section>
 
@@ -862,11 +854,14 @@
         
         <!-- View All Button -->
         <div class="text-center mt-10">
-            <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 group">
+            <a href="javascript:void(0)" onclick="openModal()" 
+            class="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 group">
                 View All Success Stories
                 <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
             </a>
         </div>
+
+        
     </div>
 </section>
 
@@ -905,8 +900,8 @@
                             <i class="fas fa-briefcase text-green-600 dark:text-green-400 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Work Visa</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Based on country & profile</p>
-                        <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$9,500</div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Based on the country, profile job and salary</p>
+                        <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$6,500 to $9,800</div>
                         <ul class="text-left space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Job search assistance</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Legal processing</li>
@@ -974,7 +969,6 @@
                             <i class="fas fa-crown mr-2"></i> Founder & CEO
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Parth Trivedi</h3>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Partner: Jigar Gohil</p>
                         
                         <blockquote class="text-xl italic text-gray-800 dark:text-gray-200 border-l-4 border-blue-500 pl-4 py-2 my-6">
                             "We don't sell visas. We build global futures."
@@ -1364,7 +1358,11 @@
                 </div>
                 <h4 class="font-bold text-lg mb-2">Visit Our Office</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Meet us in person for detailed discussion.</p>
-                <a href="#" class="inline-flex items-center text-gray-700 dark:text-gray-300 font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Vinayaka+Cafe+%26+Bar+Kalideres" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-gray-700 dark:text-gray-300 font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400">
                     View Locations
                     <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
                 </a>
@@ -1399,4 +1397,337 @@
         </div>
     </div>
 </section>
+
+<!-- Modal for Video Gallery -->
+<div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-4">
+    <div class="relative w-full max-w-5xl bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+        <div class="flex items-center justify-between p-6 border-b dark:border-gray-800">
+            <h3 class="text-xl font-bold dark:text-white flex items-center">
+                <i class="fas fa-folder-open mr-3 text-blue-500"></i> Success Stories
+            </h3>
+            <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 transition-colors">
+                <i class="fas fa-times-circle text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="p-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-h-[60vh] overflow-y-auto p-2">
+                
+                <!-- Video Item 1 -->
+                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test1.mp4') }}', 'Budi - Software Engineer')">
+                    <div class="relative w-full aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-transparent group-hover:border-blue-500 group-hover:shadow-lg transition-all duration-300">
+                        <!-- Video thumbnail with 1:1 aspect ratio -->
+                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-emerald-100 dark:from-blue-900/30 dark:to-emerald-900/30">
+                            <video class="w-full h-full object-cover" muted playsinline>
+                                <source src="{{ asset('videos/Test1.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Play overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all duration-300">
+                            <i class="fas fa-play text-white text-4xl opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></i>
+                        </div>
+                        <!-- Success indicator -->
+                        <div class="absolute bottom-2 left-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] border-2 border-white shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Budi - Software Engineer</p>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test2.mp4') }}', 'Siti - Data Analyst')">
+                    <div class="relative w-full aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-transparent group-hover:border-blue-500 group-hover:shadow-lg transition-all duration-300">
+                        <!-- Video thumbnail with 1:1 aspect ratio -->
+                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                            <video class="w-full h-full object-cover" muted playsinline>
+                                <source src="{{ asset('videos/Test2.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Play overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all duration-300">
+                            <i class="fas fa-play text-white text-4xl opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></i>
+                        </div>
+                        <!-- Success indicator -->
+                        <div class="absolute bottom-2 left-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] border-2 border-white shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Siti - Data Analyst</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Player (tanpa space hitam) -->
+<div id="videoPlayerOverlay" class="fixed inset-0 z-[100] hidden bg-black/95 animate-in fade-in duration-200">
+    <!-- Container utama untuk video dan title -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
+        <!-- Container video saja -->
+        <div class="relative">
+            <video id="mainPlayer" controls class="rounded-lg shadow-2xl" playsinline>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- Video Title -->
+        <h4 id="videoTitle" class="text-white mt-4 text-lg font-bold text-center max-w-2xl"></h4>
+        
+        <!-- Close hint -->
+        <p class="text-white/60 text-sm mt-2 text-center">
+            <i class="fas fa-info-circle mr-1"></i> Klik di luar video untuk menutup
+        </p>
+    </div>
+</div>
+
+<script>
+    // DOM Elements
+    const modalGallery = document.getElementById('videoModal');
+    const playerOverlay = document.getElementById('videoPlayerOverlay');
+    const mainPlayer = document.getElementById('mainPlayer');
+    const videoTitle = document.getElementById('videoTitle');
+
+    // Open Main Gallery
+    function openModal() {
+        modalGallery.classList.remove('hidden');
+        modalGallery.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+
+    // Close Main Gallery
+    function closeModal() {
+        modalGallery.classList.add('hidden');
+        modalGallery.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+        document.documentElement.style.overflow = 'auto';
+        closePlayer();
+    }
+
+    // Play Video (Enlarged Mode)
+    function playVideo(source, title) {
+        mainPlayer.src = source;
+        videoTitle.innerText = title;
+        
+        // Reset video size sebelum menyesuaikan
+        mainPlayer.style.width = '';
+        mainPlayer.style.height = '';
+        mainPlayer.style.maxWidth = '';
+        mainPlayer.style.maxHeight = '';
+        
+        playerOverlay.classList.remove('hidden');
+        
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        
+        // Load video
+        mainPlayer.load();
+        
+        // Tunggu metadata video dimuat untuk mendapatkan ukuran asli
+        mainPlayer.addEventListener('loadedmetadata', function() {
+            adjustVideoSize();
+        });
+        
+        // Try to play video
+        const playPromise = mainPlayer.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Autoplay was prevented:", error);
+            });
+        }
+    }
+
+    // Adjust video size based on screen and video aspect ratio
+    function adjustVideoSize() {
+        const videoAspectRatio = mainPlayer.videoWidth / mainPlayer.videoHeight;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        
+        // Tentukan ukuran maksimal berdasarkan layar
+        const maxWidth = Math.min(screenWidth * 0.85, 800); // 85% dari layar atau maks 800px
+        const maxHeight = Math.min(screenHeight * 0.75, 600); // 75% dari layar atau maks 600px
+        
+        let width, height;
+        
+        // Hitung ukuran berdasarkan aspect ratio video
+        if (videoAspectRatio > 1) {
+            // Video landscape (lebar > tinggi)
+            width = maxWidth;
+            height = width / videoAspectRatio;
+            
+            if (height > maxHeight) {
+                height = maxHeight;
+                width = height * videoAspectRatio;
+            }
+        } else {
+            // Video portrait (tinggi > lebar) atau square
+            height = maxHeight;
+            width = height * videoAspectRatio;
+            
+            if (width > maxWidth) {
+                width = maxWidth;
+                height = width / videoAspectRatio;
+            }
+        }
+        
+        // Terapkan ukuran ke video
+        mainPlayer.style.width = width + 'px';
+        mainPlayer.style.height = height + 'px';
+    }
+
+    // Close Player
+    function closePlayer() {
+        playerOverlay.classList.add('hidden');
+        mainPlayer.pause();
+        mainPlayer.currentTime = 0;
+        document.body.style.overflow = 'auto';
+        document.documentElement.style.overflow = 'auto';
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (!playerOverlay.classList.contains('hidden') && mainPlayer.src) {
+            adjustVideoSize();
+        }
+    });
+
+    // Close modals when clicking on dark background
+    window.addEventListener('click', function(event) {
+        if (event.target == modalGallery) closeModal();
+        if (event.target == playerOverlay) closePlayer();
+    });
+
+    // Close modals with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            if (!playerOverlay.classList.contains('hidden')) {
+                closePlayer();
+            } else if (!modalGallery.classList.contains('hidden')) {
+                closeModal();
+            }
+        }
+    });
+
+    // Preload video thumbnails
+    window.addEventListener('load', function() {
+        const videoThumbs = document.querySelectorAll('.group video');
+        videoThumbs.forEach(video => {
+            video.currentTime = 1;
+        });
+    });
+    
+    // Handle video ended
+    mainPlayer.addEventListener('ended', function() {
+        setTimeout(function() {
+            if (!playerOverlay.classList.contains('hidden')) {
+                closePlayer();
+            }
+        }, 2000);
+    });
+</script>
+
+<style>
+    /* Custom styles */
+    .aspect-square {
+        aspect-ratio: 1 / 1;
+    }
+    
+    /* Animations */
+    .animate-in {
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+    }
+    
+    .fade-in {
+        animation-name: fadeIn;
+    }
+    
+    .zoom-in {
+        animation-name: zoomIn;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes zoomIn {
+        from { 
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to { 
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Scrollbar */
+    .overflow-y-auto::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .overflow-y-auto::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+    
+    .overflow-y-auto::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+    
+    .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+    .dark .overflow-y-auto::-webkit-scrollbar-track {
+        background: #2d3748;
+    }
+    
+    .dark .overflow-y-auto::-webkit-scrollbar-thumb {
+        background: #4a5568;
+    }
+    
+    .dark .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+        background: #718096;
+    }
+    
+    /* Video player responsive styles */
+    #mainPlayer {
+        transition: all 0.3s ease;
+        background-color: #000; /* Background hitam untuk video */
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+        #mainPlayer {
+            max-width: 95vw !important;
+            max-height: 50vh !important;
+        }
+        
+        #videoTitle {
+            font-size: 16px;
+            margin-top: 12px;
+            max-width: 90vw;
+        }
+    }
+    
+    @media (min-width: 641px) and (max-width: 1024px) {
+        #mainPlayer {
+            max-width: 85vw !important;
+            max-height: 65vh !important;
+        }
+    }
+</style>
 @endsection

@@ -219,7 +219,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-blue-500"></i>
-                            <a href="mailto:info@universalimmigration.com" class="hover:text-blue-600 dark:hover:text-blue-400">info@universalimmigration.com</a>
+                            <a href="mailto:info@universalimmigration.com" class="hover:text-blue-600 dark:hover:text-blue-400">universal.imm786@gmail.com</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>
