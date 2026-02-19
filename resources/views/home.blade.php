@@ -1414,7 +1414,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-h-[60vh] overflow-y-auto p-2">
                 
                 <!-- Video Item 1 -->
-                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test1.mp4') }}', 'Budi - Software Engineer')">
+                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test1.mp4') }}', 'Russia - Study Visa')">
                     <div class="relative w-full aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-transparent group-hover:border-blue-500 group-hover:shadow-lg transition-all duration-300">
                         <!-- Video thumbnail with 1:1 aspect ratio -->
                         <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-emerald-100 dark:from-blue-900/30 dark:to-emerald-900/30">
@@ -1431,11 +1431,11 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </div>
-                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Budi - Software Engineer</p>
+                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Russia - Study Visa</p>
                 </div>
 
                 <!-- Video Item 2 -->
-                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test2.mp4') }}', 'Siti - Data Analyst')">
+                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test2.mp4') }}', 'Russia - Study Visa')">
                     <div class="relative w-full aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-transparent group-hover:border-blue-500 group-hover:shadow-lg transition-all duration-300">
                         <!-- Video thumbnail with 1:1 aspect ratio -->
                         <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
@@ -1452,7 +1452,47 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </div>
-                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Siti - Data Analyst</p>
+                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Russia - Study Visa</p>
+                </div>
+                <!-- Video Item 3 -->
+                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test2.mp4') }}', 'Singapore - Workpass')">
+                    <div class="relative w-full aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-transparent group-hover:border-blue-500 group-hover:shadow-lg transition-all duration-300">
+                        <!-- Video thumbnail with 1:1 aspect ratio -->
+                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                            <video class="w-full h-full object-cover" muted playsinline>
+                                <source src="{{ asset('videos/Test3.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Play overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all duration-300">
+                            <i class="fas fa-play text-white text-4xl opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></i>
+                        </div>
+                        <!-- Success indicator -->
+                        <div class="absolute bottom-2 left-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] border-2 border-white shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2">Singapore - Workpass</p>
+                </div>
+                <!-- Video Item 4 -->
+                <div class="group cursor-pointer flex flex-col items-center" onclick="playVideo('{{ asset('videos/Test2.mp4') }}', ' - ')">
+                    <div class="relative w-full aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-transparent group-hover:border-blue-500 group-hover:shadow-lg transition-all duration-300">
+                        <!-- Video thumbnail with 1:1 aspect ratio -->
+                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                            <video class="w-full h-full object-cover" muted playsinline>
+                                <source src="{{ asset('videos/Test4.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Play overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all duration-300">
+                            <i class="fas fa-play text-white text-4xl opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></i>
+                        </div>
+                        <!-- Success indicator -->
+                        <div class="absolute bottom-2 left-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] border-2 border-white shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-[11px] font-medium text-center dark:text-gray-300 line-clamp-2"> - </p>
                 </div>
 
             </div>
